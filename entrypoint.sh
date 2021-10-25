@@ -19,7 +19,7 @@ set -e
 if [ -z ${USER_ID+x} ]; then USER_ID=1000; fi
 if [ -z ${GROUP_ID+x} ]; then GROUP_ID=1000; fi
 
-USER_GROUP=openxr_container
+USER_GROUP=container
 
 echo "Creating user and group $USER_GROUP:$USER_GROUP with ID ${USER_ID}:${GROUP_ID}"
 groupadd -g $GROUP_ID -r $USER_GROUP > /dev/null && \
@@ -27,6 +27,8 @@ useradd -u $USER_ID --create-home -r -g $USER_GROUP $USER_GROUP
 
 export HOME=/home/$USER_GROUP
 export USER=$USER_GROUP
+
+echo -e "${USER_GROUP}\tALL=(ALL:ALL) NOPASSWD: ALL" > /etc/sudoers.d/container
 
 
 if [ "${CONTAINER_CWD}" ]; then
