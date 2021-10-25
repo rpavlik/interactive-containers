@@ -20,7 +20,7 @@ FROM ubuntu:bionic
 LABEL maintainer="Ryan Pavlik <ryan.pavlik@collabora.com>"
 
 RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y -qq \
+    DEBIAN_FRONTEND="noninteractive" apt-get install --no-install-recommends -y -qq \
     bash \
     build-essential \
     cmake \

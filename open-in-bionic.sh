@@ -9,7 +9,7 @@
 # your outside-of-container user, thus avoiding mangling permissions.
 # Container is automatically removed when you exit it.
 
-IMAGE_NAME=rpavlik/docker-images:bionic
+IMAGE_NAME=rpavlik/interactive-containers:bionic
 MOUNTPOINT=$(pwd)
 
 set -e

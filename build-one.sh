@@ -8,7 +8,7 @@
 
 set -e
 
-REPO="rpavlik/docker-images"
+REPO="rpavlik/interactive-containers"
 
 (
     cd $(dirname $0)

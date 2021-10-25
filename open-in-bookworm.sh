@@ -9,7 +9,7 @@
 # your outside-of-container user, thus avoiding mangling permissions.
 # Container is automatically removed when you exit it.
 
-IMAGE_NAME=rpavlik/docker-images:bookworm
+IMAGE_NAME=rpavlik/interactive-containers:bookworm
 MOUNTPOINT=$(pwd)
 
 set -e
