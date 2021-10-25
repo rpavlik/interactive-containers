@@ -26,6 +26,7 @@ RUN apt-get update -qq && \
     dpkg-dev \
     git-buildpackage \
     gosu \
+    sudo \
     && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
