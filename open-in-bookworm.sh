@@ -1,6 +1,6 @@
 #!/bin/bash
 # Copyright (c) 2019-2021, The Khronos Group Inc.
-# Copyright (c) 2019 Collabora, Ltd.
+# Copyright (c) 2019-2021 Collabora, Ltd.
 # SPDX-License-Identifier: Apache-2.0
 
 # Start the docker image named below.
