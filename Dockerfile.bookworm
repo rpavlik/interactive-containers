@@ -36,6 +36,9 @@ RUN apt-get update -qq && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
+# Add a source entry
+RUN grep "deb http://deb.debian.org" /etc/apt/sources.list | sed 's/^deb /deb-src /' >> /etc/apt/sources.list
+
 # Add the entrypoint to the image
 COPY entrypoint.sh /root/entrypoint.sh
 RUN chmod +x /root/entrypoint.sh
