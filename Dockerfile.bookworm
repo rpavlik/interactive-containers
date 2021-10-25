@@ -24,9 +24,14 @@ RUN apt-get update -qq && \
     bash \
     build-essential \
     dpkg-dev \
+    fish \
     git-buildpackage \
     gosu \
+    nano \
     sudo \
+    openssh-client \
+    bash-completion \
+    git \
     && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
